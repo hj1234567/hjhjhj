@@ -1,0 +1,20 @@
+<!--miniprogram/pages/index.wxml-->
+<!-- <text>miniprogram/pages/index.wxml</text> -->
+<view class="container">
+    <view class="search">
+      <!-- <image src="../../images/"></image> -->
+      <input type="text" placeholder="Anything here..." value="{{search}}" bindchange="inputChangeHandle"></input>
+    </view>
+    <view class="todos">
+      <view class="item{{item.completed?' completed ':''}}" wx:for="{{todos}}">
+        <icon type="{{item.completed?'success':'circle'}}"  size="16"></icon>
+        <text>{{item.name}}</text>
+        <icon type="clear"></icon>
+      </view>
+    </view>
+    <view class="footer">
+      <text>Toggle all</text>
+      <text>2 items left</text>
+      <text>Clear completed</text>
+    </view>
+</view>
